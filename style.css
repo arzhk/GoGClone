@@ -31,17 +31,53 @@ body {
   z-index: -1;
 }
 
-.navbar a {
+.navbar a.nav-item,
+a.nav-link,
+.navbar form a {
   color: #ccc !important;
   text-decoration: none;
+}
+
+.navbar .dropdown-item {
+  color: #2c2c2c !important;
+  text-decoration: none;
+  padding: 5px 15px 5px 12px;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: background-color 0.15s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #e7e7e7 !important;
+  color: #2c2c2c !important;
+}
+
+.navbar .dropdown-menu:last-of-type p {
+  font-size: 14px;
 }
 
 .navbar a:hover {
   color: #fff !important;
 }
 
+.navbar #store-nav-link a.dropdown-item::after {
+  content: ">";
+  color: #ccc;
+  position: absolute;
+  right: 20px;
+  letter-spacing: -3px;
+}
+.navbar #store-nav-link a.dropdown-item:hover::after {
+  content: ">>";
+  color: #ccc;
+  position: absolute;
+  right: 20px;
+  color: #2c2c2c !important;
+}
+
 .navbar {
   z-index: 9999;
+  background: #2c2c2c;
 }
 
 .brand-container {
@@ -51,6 +87,7 @@ body {
   background-color: #fff;
   border-radius: 2px;
   display: flex;
+  margin-top: 2px;
 }
 
 #sign-in-link {
@@ -61,12 +98,8 @@ body {
   color: #f9b2ff !important;
 }
 
-.dropdown-toggle::after {
-  transition: transform 0.15s linear;
-}
-
-.show.dropdown .dropdown-toggle::after {
-  transform: translateY(3px);
+.navbar-collapse {
+  margin-top: 10px;
 }
 
 @media all and (min-width: 992px) {
@@ -82,6 +115,66 @@ body {
   .navbar .nav-item .dropdown-menu {
     margin-top: 0;
   }
+
+  .navbar-collapse {
+    margin-top: 0px;
+  }
+  .navbar .dropdown-menu {
+    padding: 8px;
+    margin-left: -50%;
+    width: 230px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar .signin-dropdown {
+    padding: 8px;
+    margin-left: -185%;
+    width: 500px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  }
+  .navbar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    background: url(assets/bg.jpg) repeat-x top center rgba(26, 26, 26, 0.9);
+    z-index: -1;
+  }
+
+  .dropdown-menu {
+    animation-name: slidenavAnimation;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slidenavAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .navbar {
+    background: rgba(0, 0, 0, 0);
+  }
+  .brand-container {
+    margin-bottom: 8px;
+    margin-right: 2.5rem;
+    margin-top: 0px;
+  }
 }
 
 .dropdown-menu {
@@ -90,17 +183,6 @@ body {
   animation-iteration-count: 1;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-}
-
-@keyframes slidenavAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
 }
 
 #bg-dim {
@@ -118,4 +200,65 @@ body {
 
 .fade {
   opacity: 1 !important;
+}
+
+.navbar li {
+  padding-bottom: 8px;
+}
+
+.navbar .first-link-txt {
+  color: rgb(150, 95, 4) !important;
+}
+
+.navbar .first-link-txt:hover {
+  color: rgb(150, 95, 4) !important;
+}
+
+.navbar .second-link-txt {
+  color: rgb(84, 103, 133) !important;
+}
+
+.navbar .second-link-txt:hover {
+  color: rgb(84, 103, 133) !important;
+}
+
+.navbar .third-link-txt {
+  color: rgb(74, 181, 36) !important;
+}
+
+.navbar .third-link-txt:hover {
+  color: rgb(74, 181, 36) !important;
+}
+
+.btn-create-account {
+  width: 45%;
+  background-color: #e6e6e6;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  line-height: 36px;
+  font-size: 13px;
+  text-decoration: rgb(76, 76, 76);
+  margin: 0px 10px;
+}
+
+.btn-create-account:hover {
+  background-image: linear-gradient(to bottom, #e6e6e6, #e1e1e1);
+}
+
+.btn-sign-in {
+  width: 45%;
+  line-height: 36px;
+  font-size: 13px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(
+    rgb(152, 95, 178) 0%,
+    rgb(113, 59, 141) 100%
+  );
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  margin: 0px 10px;
+}
+.btn-sign-in:hover {
+  color: #fff;
 }
