@@ -40,6 +40,10 @@ body {
   color: #fff !important;
 }
 
+.navbar {
+  z-index: 9999;
+}
+
 .brand-container {
   width: 34px;
   height: 31px;
@@ -47,4 +51,71 @@ body {
   background-color: #fff;
   border-radius: 2px;
   display: flex;
+}
+
+#sign-in-link {
+  color: #db88e5 !important;
+}
+
+#sign-in-link:hover {
+  color: #f9b2ff !important;
+}
+
+.dropdown-toggle::after {
+  transition: transform 0.15s linear;
+}
+
+.show.dropdown .dropdown-toggle::after {
+  transform: translateY(3px);
+}
+
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+    color: #fff;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+.dropdown-menu {
+  animation-name: slidenavAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidenavAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#bg-dim {
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  transform: all 1s ease;
+}
+
+.fade {
+  opacity: 1 !important;
 }
