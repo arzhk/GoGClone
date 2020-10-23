@@ -26,6 +26,10 @@ body {
   max-width: 1180px;
 }
 
+.spacer {
+  height: 60px;
+}
+
 .grey-brdr-b {
   border-bottom: 1px solid rgb(190, 190, 190);
 }
@@ -123,6 +127,9 @@ a.nav-link,
 .navbar {
   z-index: 9999;
   background: #2c2c2c;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .brand-container {
