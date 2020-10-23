@@ -310,8 +310,8 @@ a.nav-link,
 
 /* Carousel section */
 
-.carousel-control-next,
-.carousel-control-prev {
+#main-carousel .carousel-control-next,
+#main-carousel .carousel-control-prev {
   width: 3rem;
   height: 3rem;
   top: 40%;
@@ -438,10 +438,10 @@ a.nav-link,
 
 /* Quad card section */
 
-#quad-cards .card {
+.card {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 0px;
-  border: none;
+  border-radius: 0px !important;
+  border: none !important;
   background-color: rgba(250, 250, 250, 0.6);
 }
 
@@ -467,7 +467,7 @@ a.nav-link,
   right: 20px;
   bottom: 20px;
   font-size: 13px;
-  color: rgb(179, 179, 179);
+  color: rgb(179, 179, 179) !important;
 }
 
 .card .icons {
@@ -532,4 +532,131 @@ a.nav-link,
   min-height: 46px;
   background: linear-gradient(-180deg, #bfe600, #8ebd00);
   color: #fff;
+}
+
+/* SALES sections */
+
+#sales a {
+  border: none;
+  color: #686868 !important;
+  border-bottom: 4px solid transparent;
+}
+
+#sales a.active {
+  color: #78387b !important;
+  border-bottom: 4px solid #78387b;
+}
+
+#sales .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+}
+
+#sales .nav-tabs {
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+#sales p.nav-link {
+  border: none;
+  color: #2c2c2c !important;
+  margin: 0;
+}
+
+#sales h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#sales .card p {
+  font-size: 16px;
+  color: #ffec00;
+}
+
+#sales .card p:nth-child(4) {
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#sales h3 {
+  font-size: 64px;
+  color: #ffec00;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#sales .content-wrapper {
+  text-align: center;
+  height: 100%;
+}
+
+#sales button {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  min-width: 169px;
+  transition: background-color 0.25s ease;
+}
+
+#sales button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#sales .img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+#sales .card {
+  border: none;
+}
+
+#sales .img-overlay-green {
+  background-color: rgba(6, 22, 6, 0.6);
+}
+
+#sales .img-overlay-redish {
+  background-color: rgba(85, 39, 41, 0.6);
+}
+
+#sales .img-overlay-paleblue {
+  background-color: rgba(17, 27, 59, 0.6);
+}
+
+#sales .img-overlay-orange {
+  background-color: rgba(54, 39, 15, 0.6);
+}
+
+#sales .mid-wrap {
+  position: absolute;
+  bottom: 140px;
+}
+
+#sales .bottom-wrap {
+  position: absolute;
+  bottom: 20px;
+}
+
+#sales .carousel-inner {
+  box-shadow: none;
+}
+
+#sales .carousel-control-next,
+#sales .carousel-control-prev {
+  width: 2rem;
+  height: 2rem;
+  color: #1b1b1b;
+  top: 40%;
+  bottom: 40%;
+  margin: 0 -5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
+#sales .carousel-control-next-icon,
+#sales .carousel-control-prev-icon {
+  margin-top: 4px;
 }
