@@ -46,6 +46,10 @@ body {
   color: #1b1b1b;
 }
 
+.text-white {
+  color: #fff;
+}
+
 .text-sub-text {
   color: rgba(255, 255, 255, 0.5);
 }
@@ -488,4 +492,44 @@ a.nav-link,
 #drm-free a {
   color: rgb(64, 64, 64);
   text-decoration: none;
+}
+
+/* PROMO BANNERS section */
+
+#promo-banner .promo-banner-wrapper {
+  position: relative;
+}
+
+#promo-banner .text-wrapper {
+  position: absolute;
+  left: 24px;
+}
+
+#promo-banner .text-wrapper h3 {
+  font-size: 24px;
+}
+
+#promo-banner .text-wrapper h5 {
+  font-size: 16px;
+}
+
+#promo-banner .btn-promo {
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 2px;
+  background-color: transparent;
+  position: absolute;
+  right: 24px;
+  height: 46px;
+  min-width: 169px;
+}
+
+#promo-banner .btn-promo:hover {
+  box-shadow: 0 1px 3px 0 hsla(0, 0%, 100%, 0.3),
+    0 0 40px 0 rgba(159, 191, 0, 0.5);
+  border: 1px solid #8ebd00;
+  border-radius: 3px;
+  min-height: 46px;
+  background: linear-gradient(-180deg, #bfe600, #8ebd00);
+  color: #fff;
 }
