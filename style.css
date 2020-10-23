@@ -13,6 +13,8 @@
 
 */
 
+/* GLOBAL STYLING */
+
 body {
   margin: 0;
   padding: 0;
@@ -23,6 +25,40 @@ body {
 .container {
   max-width: 1180px;
 }
+
+.grey-brdr-b {
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.grey-brdr-t {
+  border-top: 1px solid rgb(190, 190, 190);
+}
+
+.grey-brdr-l {
+  border-left: 1px solid rgb(190, 190, 190);
+}
+
+.grey-brdr-r {
+  border-right: 1px solid rgb(190, 190, 190);
+}
+
+.text-black {
+  color: #1b1b1b;
+}
+
+.text-sub-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.text-purple {
+  color: #78387b !important;
+}
+
+.font-weight-900 {
+  font-weight: 900 !important;
+}
+
+/* NAVBAR STYLING */
 
 .navbar::before {
   content: "";
@@ -270,10 +306,6 @@ a.nav-link,
 
 /* Carousel section */
 
-.grey-brdr-b {
-  border-bottom: 1px solid rgb(190, 190, 190);
-}
-
 .carousel-control-next,
 .carousel-control-prev {
   width: 3rem;
@@ -305,14 +337,6 @@ a.nav-link,
 
 .carousel-indicators li.active {
   background-color: #78387b;
-}
-
-.text-black {
-  color: #1b1b1b;
-}
-
-.text-sub-text {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .carousel-item h2.main-text {
@@ -452,4 +476,16 @@ a.nav-link,
 .card .icons i {
   height: 16px;
   width: 16px;
+}
+
+/* DRM Free message section */
+
+#drm-free {
+  width: 100%;
+  padding: 1rem 0rem;
+}
+
+#drm-free a {
+  color: rgb(64, 64, 64);
+  text-decoration: none;
 }
