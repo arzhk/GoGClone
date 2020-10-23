@@ -667,3 +667,27 @@ a.nav-link,
 #sales .carousel-control-prev-icon {
   margin-top: 4px;
 }
+
+#weekly-sale img,
+#surviving-mars-bundle img {
+  height: 131px;
+}
+
+#weekly-sale img.full-height,
+#surviving-mars-bundle img.full-height {
+  height: 100% !important;
+  min-height: 454px !important;
+}
+
+#sales .large-img-mins {
+  min-height: 440px;
+  min-width: 200px;
+}
+
+#sales .overlay-mins {
+  min-width: 200px;
+}
+
+#sales .col-mins {
+  min-width: 240px;
+}
