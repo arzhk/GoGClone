@@ -421,9 +421,6 @@ a.nav-link,
   margin-left: 10px;
 }
 
-.carousel-sub-text-nobadge {
-}
-
 .btn-add-to-cart {
   color: #fff;
   padding: 0.5rem 1.5rem;
@@ -524,8 +521,12 @@ a.nav-link,
 }
 
 @media all and (max-width: 992px) {
-  .card .price-info {
+  #quad-cards .card .price-info {
     padding: 28px 16px 0px !important;
+  }
+
+  #sales .card .price-info {
+    padding: 33px 16px 0px !important;
   }
 }
 
@@ -688,6 +689,11 @@ a.nav-link,
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+#sales .dropdown-menu {
+  top: 39px !important;
+  border-top: 4px solid #78387b !important;
+}
+
 #sales .img-overlay {
   position: absolute;
   top: 0;
@@ -777,6 +783,12 @@ a.nav-link,
   height: 450px;
 }
 
+@media all and (min-width: 576px) {
+  #sales .featured-card-full {
+    height: 100%;
+  }
+}
+
 #sales .featured-card::before {
   content: "";
   position: absolute;
@@ -840,4 +852,28 @@ a.nav-link,
 
 #sales .card-4:hover.card-4::before {
   background: rgba(32, 28, 16, 0.7);
+}
+
+/* Whats Good Section */
+
+#whats-good .first-card {
+  background-image: url("assets/tile (2).jpg");
+}
+
+#whats-good .second-card {
+  background-image: url("assets/tile (3).jpg");
+}
+
+#whats-good .third-card {
+  background-image: url("assets/tile (6).jpg");
+}
+
+#whats-good .fourth-card {
+  background-image: url("assets/tile (9).jpg");
+}
+
+@media all and (min-width: 768px) {
+  #whats-good .featured-card-full {
+    height: 100%;
+  }
 }
