@@ -352,6 +352,13 @@ a.nav-link,
   }
 }
 
+@media all and (max-width: 568px) {
+  #main-carousel .carousel-control-next,
+  #main-carousel .carousel-control-prev {
+    display: none;
+  }
+}
+
 .carousel-indicators {
   bottom: -50px;
 }
@@ -465,15 +472,53 @@ a.nav-link,
 
 /* Quad card section */
 
+#quad-cards .img-wrapper {
+  height: 117px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#quad-cards .first-card {
+  background-image: url("assets/tile (2).jpg");
+}
+
+#quad-cards .second-card {
+  background-image: url("assets/tile (3).jpg");
+}
+
+#quad-cards .third-card {
+  background-image: url("assets/tile (6).jpg");
+}
+
+#quad-cards .fourth-card {
+  background-image: url("assets/tile (9).jpg");
+}
+
 .card {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 0px !important;
   border: none !important;
   background-color: rgba(250, 250, 250, 0.6);
+  min-width: 250px;
+}
+.card-body {
+  padding: 0;
 }
 
-.card-body {
-  padding: 0.5rem 1.2rem;
+.card-title {
+  padding: 8px 16px 0px;
+  margin-bottom: 0;
+}
+
+.card .price-info {
+  padding: 38px 16px 0px;
+}
+
+@media all and (max-width: 992px) {
+  .card .price-info {
+    padding: 28px 16px 0px;
+  }
 }
 
 .card .sale-txt {
@@ -490,18 +535,14 @@ a.nav-link,
 
 .card .previous-price {
   text-decoration: line-through;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
   font-size: 13px;
   color: rgb(179, 179, 179) !important;
+  text-align: right;
+  margin: 0;
 }
 
 .card .icons {
   color: rgb(184, 184, 184);
-  position: absolute;
-  bottom: 6px;
-  left: 12px;
 }
 
 .card .icons i {
