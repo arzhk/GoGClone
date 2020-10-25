@@ -336,6 +336,22 @@ a.nav-link,
   margin-left: -2px;
 }
 
+@media all and (max-width: 1200px) {
+  #main-carousel .carousel-control-next,
+  #main-carousel .carousel-control-prev {
+    margin: 0 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    left: 30px !important;
+    bottom: -10px !important;
+    right: 30px !important;
+  }
+}
+
 .carousel-indicators {
   bottom: -50px;
 }
@@ -351,64 +367,68 @@ a.nav-link,
 }
 
 .carousel-item h2.main-text {
-  position: absolute;
-  left: -8rem;
-  bottom: 0;
+  display: inline-block;
 }
 
 .carousel-item h2.sub-text-price {
-  position: absolute;
-  right: 5rem;
-  bottom: 0;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  right: 13.5rem;
+  bottom: 1.8rem;
 }
 
 .carousel-item h2.sale-txt {
-  position: absolute;
-  right: 13.5rem;
-  bottom: -5px;
   background-color: #78387b;
   padding: 4px 10px;
   border-radius: 4px;
+  position: absolute;
+  right: 21rem;
+  bottom: 1rem;
+}
+
+.carousel-item .fa-windows {
+  margin-left: 2px;
 }
 
 .carousel-inner {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.carousel-caption {
+  position: absolute;
+  left: 40px;
+  bottom: 0px;
+  right: 40px;
+}
+
 .soon-badge {
   background-color: #094a77;
   padding: 8px 16px;
-  position: absolute;
-  left: -8rem;
-  top: -2.5rem;
   border-radius: 3px;
 }
 
 .carousel-sub-text {
-  position: absolute;
-  left: -2rem;
-  top: -2.5rem;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .carousel-sub-text-nobadge {
-  position: absolute;
-  left: -8rem;
-  top: -2.5rem;
 }
 
 .btn-add-to-cart {
   color: #fff;
   padding: 0.5rem 1.5rem;
-  position: absolute;
-  right: -9rem;
-  bottom: 0;
   font-size: 1.5rem;
-  margin-top: 1rem;
   background-color: #bde94f;
   background-image: linear-gradient(180deg, #bde94f 0%, #82b12b 100%);
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0;
 }
 
 .btn-add-to-cart:hover {
@@ -421,8 +441,8 @@ a.nav-link,
   color: #fff;
   padding: 0.5rem 1.5rem;
   position: absolute;
-  right: -9rem;
-  bottom: 0;
+  bottom: 1.5rem;
+  right: 0;
   font-size: 1.5rem;
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0);
