@@ -504,6 +504,7 @@ a.nav-link,
 }
 .card-body {
   padding: 0;
+  height: 118px;
 }
 
 .card-title {
@@ -513,6 +514,14 @@ a.nav-link,
 
 .card .price-info {
   padding: 38px 16px 0px;
+}
+
+.card .price-info.coming-soon {
+  padding: 54px 16px 0px;
+}
+
+.card .coming-soon span {
+  font-size: 16px;
 }
 
 @media all and (max-width: 992px) {
@@ -568,17 +577,30 @@ a.nav-link,
   position: relative;
 }
 
-#promo-banner .text-wrapper {
-  position: absolute;
-  left: 24px;
+#promo-banner #large-banner {
+  height: 110px;
+  background-image: url("assets/promo-banner2x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#promo-banner #small-banner {
+  height: 200px;
+  background-image: url("assets/promo-banner-small2x.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #promo-banner .text-wrapper h3 {
   font-size: 24px;
+  pointer-events: none;
 }
 
 #promo-banner .text-wrapper h5 {
   font-size: 16px;
+  pointer-events: none;
 }
 
 #promo-banner .btn-promo {
@@ -586,13 +608,14 @@ a.nav-link,
   color: #fff;
   border-radius: 2px;
   background-color: transparent;
-  position: absolute;
-  right: 24px;
+}
+
+#promo-banner .btn-promo {
   height: 46px;
   min-width: 169px;
 }
 
-#promo-banner .btn-promo:hover {
+#promo-banner:hover .btn-promo {
   box-shadow: 0 1px 3px 0 hsla(0, 0%, 100%, 0.3),
     0 0 40px 0 rgba(159, 191, 0, 0.5);
   border: 1px solid #8ebd00;
